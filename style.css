@@ -1,0 +1,117 @@
+body {
+    background-color: rgb(30, 32, 32);
+    height: 100vh;
+    font-family: 'Square Peg', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    background-color: rgb(39, 39, 39);
+    color: rgb(206, 93, 0);
+    border: 1px inset rgb(206, 93, 0);
+    border-radius: 8px;
+    box-shadow: 0 0 10px 5px rgb(206, 93, 0, 0.3);
+    font-family: inherit;
+    font-size: 30px;
+    padding: 0.7rem 1rem;
+}
+
+.game {
+    background-color: rgb(39, 39, 39);
+    width: 320px;
+    height: 320px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2px;
+    border-radius: 2rem;
+    box-shadow: 0 0 15px 5px rgba(66, 66, 66, 0.5);
+
+}
+
+.cell {
+    border-bottom: 3px solid black;
+    border-right: 3px solid black;
+    font-size: 50px;
+    text-align: center;
+    line-height: 95px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.cell:nth-child(3n) {
+    border-right: none;
+}
+
+.cell:nth-child(n+7) {
+    border-bottom: none;
+}
+
+.board:hover {
+    cursor: pointer;
+}
+
+.Nought {
+    background-image: url(nought.png);
+    transition: border-radius 2s, box-shadow 0.5s;
+    box-shadow: 0 0 10px 5px rgb(206, 93, 0, 0.3);
+    border-radius: 2rem;
+}
+
+.Cross {
+    background-image: url(cross.png);
+    transition: border-radius 2s, box-shadow 0.5s;
+    box-shadow: 0 0 10px 5px rgb(206, 93, 0, 0.3);
+    border-radius: 2rem;
+}
+
+
+.Nought,
+.Cross {
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.cell:hover {
+    background-color: rgba(26, 26, 26, 0.3);
+    border-radius: 1rem;
+}
+
+
+
+button {
+    background-color: rgb(39, 39, 39);
+    border: 1px solid rgb(206, 93, 0);
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 40px;
+    padding: 0.7rem 1rem;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(49, 49, 49);
+    transition: background-color 2s, border-radius 2s, color 1s, box-shadow 1s;
+    border-radius: 10px;
+    color: rgb(206, 93, 0);
+    box-shadow: 0 0 10px 5px rgb(206, 93, 0, 0.3);
+}
+
+#finalResult {
+    width: 400px;
+    height: 2rem;
+    font-family: inherit;
+    font-size: 40px;
+    color: rgb(206, 93, 0);
+    text-align: center;
+}
+
+.highlight {
+    background-color: rgb(206, 93, 0, 0.3);
+    border-radius: 2rem;
+}
