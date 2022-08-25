@@ -93,28 +93,3 @@ const resetButton = document.getElementById("reset");
 resetButton.addEventListener('click', gameBegin);
 
 
-
-
-
-
-// function clickSelect(e) {
-//     const cell = e.target;
-//     const currentMove = noughtTurn ? nought : cross;
-//     placeMarker(cell, currentMove);
-//     checkWin();
-//     changeTurn();
-// };
-
-
-// function checkWin() {
-//     let hasAllElems = true;
-
-//     for (let i = 0; i < winningCombinations.length; i++) {
-//         if (boardData.indexOf(winningCombinations[i]) === -1) {
-//             hasAllElems = false;
-//             break;
-//         }
-//     }
-
-//     console.log(hasAllElems);
-// }
